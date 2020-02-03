@@ -30,3 +30,19 @@ def get_sources(category):
             sources_results = process_results(sources_results_list)
 
         return sources_results
+
+
+def process_results(sources_list):
+    """
+    Function  that processes the sources result and transform them to a list of Objects
+    :return:a list of sources objects
+    """
+    sources_results = []
+    for sources_item in sources_list:
+        name = sources_item.get('name')
+        description = sources_item.get('description')
+        url = sources_item.get('url')
+        sources_object = Sources(name, description, url)
+        sources_results.append(sources_object)
+
+    return sources_results
