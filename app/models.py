@@ -1,23 +1,27 @@
-class Sources:
-    """
-    Sources class to define the sources objects
-    """
-
-    def __init__(self, name, description, url, language):
-        self.name = name
-        self.description = description
-        self.url = url
-
-
 class Articles:
     """
-    article class to define the articles object
+    Class articles that show the objects in the article
     """
 
-    def __init__(self, title, author, urlToImage, description,url, content):
-        self.url = url
-        self.content = content
-        self.description = description
+    def __init__(self, title, description, url, author, urlToImage, publishedAt):
         self.title = title
+        self.description = description
+        self.url = url
         self.author = author
         self.urlToImage = urlToImage
+        self.publishedAt = publishedAt
+
+
+class Sources:
+    """
+    A class sources that shows sources that are supposed to be displayed in the object
+    """
+
+    def __init__(self, name, id, url, category, language, country, description):
+        self.name = name
+        self.id = id
+        self.url = url
+        self.category = category
+        self.language = language
+        self.country = country
+        self.description = description
