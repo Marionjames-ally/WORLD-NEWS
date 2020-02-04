@@ -1,0 +1,72 @@
+{% macro display_new_sources(sources_results) %}
+{% for news in sources_results%}
+
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-4" width="200px" height="auto" >
+      <div class="card" style="display:flex;float:right" >
+        <h4 class="card-title text-center">{{news.name}}</h4>
+        <div class="card-body">
+          <p class="description">{{news.description}}</p>
+          <a href="{{news.url}}"><button class="btn btn-outline-success">View Articles</button></a>
+        </div>
+      </div>
+        </div>
+    </div>
+  </div>
+<style>
+  .card {
+    padding: 20px;
+    margin: 20px;
+    overflow-y: hidden;
+    height: 300px;
+    display: flex;
+    float:right;
+    justify-content: space-evenly;
+    box-shadow: 3px 3px 10px solid black;
+
+  }
+</style>
+  {% endfor %}
+{% endmacro %}
+
+  <!-- Displaying articles in articles_results -->
+
+  {% macro display_new_articles(articles_results) %}
+  <div class="container-fluid">
+    {% for article in articles_results %}
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+{% endblock %}
+    <div class="articles-card">
+      <div class="card-header">
+        <h2>{{ article.title}}</h2>
+        <p>{{ article.article | truncate(30) }}</p>
+      </div>
+      <div class="card-image">
+        <img src="{{article.urlToImage}}" />
+        <p>
+          {{article.description}}
+        </p>
+        <p>
+          Posted on: {{article.publishedAt | truncate(300)}} By: {{article.author |
+          truncate(25)}}
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="{{article.url}}"
+          ><button class="btn btn-sm btn-outline-success">Read more</button></a
+        >
+      </div>
+    </div>
+    <style>
+      .card{
+      padding:20px;
+      }
+
+    </style>
+    {% endfor %}
+  </div>
+  {% endmacro %}
+
