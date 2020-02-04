@@ -5,13 +5,19 @@
 <link
   rel="stylesheet"
   href="{{url_for('static', filename='css/styles.css')}}"/>
+<link href="https://fonts.googleapis.com/css?family=Graduate&display=swap" rel="stylesheet">
 
 {% endblock %}
 
 <!-- navbarblock -->
 
 {% block navbar%}
-<h1 class="WELCOME text-center">WORLD NEWS</h1>
+<div class="WELCOME text-center">
+<h1 >WORLD   NEWS </h1>
+  <hr class="hr">
+  <hr>
+  <img src="https://slaneyfarms.com/wp-content/uploads/2018/01/scroll-down3.gif" width="40px">
+  </div>
 {% endblock%}
 
 <!--Content block-->
@@ -32,7 +38,19 @@
 </div>
 <style>
   .WELCOME{
-  padding:66px;
+  color:white;
+  padding:50px;
+  padding-top:300px;
+  padding-bottom:300px;
+  background-image: linear-gradient(to right, rgb(23, 122, 20), rgb(21, 113, 21), rgb(19, 104, 21), rgb(16, 95, 22), rgb(14, 86, 22), rgb(12, 77, 23), rgb(16, 74, 23), rgb(20, 71, 23), rgb(24, 68, 24), rgb(27, 65, 24), rgb(31, 62, 24), rgb(35, 59, 24));
+  }
+  h1{
+  font-family: 'Graduate', cursive;
+  font-size: 90px;
+  }
+  .hr{
+  font-weight:5px;
+  color:white;
   }
 </style>
 

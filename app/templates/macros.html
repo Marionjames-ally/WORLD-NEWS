@@ -1,34 +1,31 @@
-{% macro display_new_sources(sources_results) %}
-{% for news in sources_results%}
 
+{% for news in sources_results%}
+{% macro display_new_sources(sources_results) %}
   <div class="container-fluid">
-    <div class="row">
-    <div class="col-md-4" width="200px" height="auto" >
-      <div class="card" style="display:flex;float:right" >
-        <h4 class="card-title text-center">{{news.name}}</h4>
-        <div class="card-body">
-          <p class="description">{{news.description}}</p>
+      <div class="card" style="width: 18rem; display:flex; justify-content: space-between; float: right; height: 20rem;">
+            <h4 class="card-title text-center">{{news.name}}</h4>
+              <div class="card-body">
+              <p class="description">{{news.description}}</p>
           <a href="{{news.url}}"><button class="btn btn-outline-success">View Articles</button></a>
         </div>
       </div>
         </div>
-    </div>
-  </div>
-<style>
+   <style>
   .card {
     padding: 20px;
     margin: 20px;
     overflow-y: hidden;
     height: 300px;
-    display: flex;
-    float:right;
-    justify-content: space-evenly;
-    box-shadow: 3px 3px 10px solid black;
+    display:flex;
+    float:left;
+    width:350px;
+
 
   }
 </style>
-  {% endfor %}
 {% endmacro %}
+
+  {% endfor %}
 
   <!-- Displaying articles in articles_results -->
 
@@ -61,10 +58,6 @@
       </div>
     </div>
     <style>
-      .card{
-      padding:20px;
-      }
-
     </style>
     {% endfor %}
   </div>
