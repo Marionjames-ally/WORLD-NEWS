@@ -19,9 +19,9 @@ view the news sources and the articles
 [![codebeat badge](https://codebeat.co/badges/a1e60599-0d34-45c8-b480-7323ea7a87df)](https://codebeat.co/projects/github-com-marionjames-ally-world-news-master)
 
 ### CONTRIBUTORS
-. Heroku for deployment
-. Github for hosting the project 
-. visual Studio code for editing the project
+1. Heroku for deployment
+2. Github for hosting the project 
+3. visual Studio code for editing the project
 
 ### LICENCE
 MIT ©MARION 2019
