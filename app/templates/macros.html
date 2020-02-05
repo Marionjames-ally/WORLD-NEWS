@@ -1,6 +1,6 @@
+{% macro display_new_sources(sources_results) %}
 
 {% for news in sources_results%}
-{% macro display_new_sources(sources_results) %}
   <div class="container-fluid">
       <div class="card" style="width: 18rem; display:flex; justify-content: space-between; float: right; height: 20rem;">
             <h4 class="card-title text-center">{{news.name}}</h4>
@@ -10,22 +10,21 @@
         </div>
       </div>
         </div>
-   <style>
+<style>
   .card {
     padding: 20px;
     margin: 20px;
+    width:300px;
+    height:auto;
     overflow-y: hidden;
     height: 300px;
     display:flex;
     float:left;
     width:350px;
-
-
   }
 </style>
-{% endmacro %}
-
   {% endfor %}
+{% endmacro %}
 
   <!-- Displaying articles in articles_results -->
 

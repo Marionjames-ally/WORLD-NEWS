@@ -87,3 +87,4 @@ def process_new_articles(articles_list):
         articles_results.append(new_article)
 
     return articles_results
+
